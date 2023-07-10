@@ -115,9 +115,12 @@ while True:
 import random
 count = 0 
 
+import random
+count = 0 
+
 while True:
   print('-------------------------------------------')
-  player = input('rock,paper,scissors')
+  player = input('rock,paper,scissors: ')
   if player == 'stop':
         break
        
@@ -136,13 +139,18 @@ while True:
             print('computer wins')
         elif (player == 'scissors' and com == 'paper') or (player == 'rock' and com == 'scissors') or (player == 'paper' and com == 'rock') :
             print('player wins')
-        elif player== ('scissors' and com == 'scissors') or (player == 'paper' and com =='paper') and player == 'rock' and com =='rock':
-            print('we tied') 
             count = count+1 
-
-
-            if count == count + 3:
+            print('count : {}'.format(count))
+            if count == 3:
                 print("player won 3 times.")
                 break
+        elif player== ('scissors' and com == 'scissors') or (player == 'paper' and com =='paper') or (player == 'rock' and com =='rock'):
+            print('we tied') 
+
+
+  else:
+      print("잘못 입력했습니다.")
+      continue
+  
 
             
