@@ -124,7 +124,7 @@ def print_command():
 def print_product(product):
     print('*'*50)
     for key in product.keys():
-      print('{} : {}'.format(key,product ))
+      print('{} : {}'.format(key, product[key] ))
     print('*'*50)
 
 product = {'메로나': 1000,
@@ -148,7 +148,6 @@ while True:
       ice_cream = input(' take out : ')
       del product[ice_cream]
   elif command == '4':
-      product[command] 
+      print_product(product)
   elif command == '5':
-      product[command]
       break
