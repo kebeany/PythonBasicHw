@@ -45,32 +45,34 @@ print(call2.add(4))
 print(call1.sub(1))
 print(call2.sub(1))
 
-class pikachu:
-    def __init__(self):
+class Pikachu:
+    def __init__(self, hp, attack, damage):
         self.name = 'pikachu'
-        self.hp = "pikachu hp 50000"
-        self.attack='mega bolt'
-        self.damage= "1300 damage given"
-
-    def get_hp (self,hp):
+        self.hp = hp
+        self.attack= attack
+        self.damage= damage
+        
+    def set_hp (self,hp):
         self.hp = hp
         return self.hp
 
-    def get_attack (self,attack):
+    def set_attack (self,attack):
         self.attack = attack
         return self.attack
 
-    def get_damage (self,damage):
+    def set_damage (self,damage):
         self.damage = damage
         return self.damage
     
-call1 = pikachu()
-call2 = pikachu()
-call3 = pikachu()
+    def print_hp(self):
+        print('hp:', self.hp)
 
-print(call1.hp)
-print(call2.attack)
-print(call3.damage)
+
+pikachu1 = Pikachu(500,'quick attack',100)
+pikachu1.print_hp()
+
+pikachu2 = Pikachu(389,'thunderbolt', 135)
+pikachu2.print_hp()
 
 a = 10
 print(type(a))
