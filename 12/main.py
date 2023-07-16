@@ -98,7 +98,7 @@ j = {'key': 'value'}#dict
 k = (2021, 2022, 2023)#tuple
 l = {'1', '2', '3'}#set
 m = '2023' + '03'#literal
-n = 2023 + 3#literal
+n = 2023 + 3#number
 
 class person:
     def __init__(self,name,age):
