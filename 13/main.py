@@ -101,7 +101,6 @@ class Pokemon:
         self.attack=attack
         self.damage=damage
 
-class Pikachu(Pokemon):
     def set_hp(self,hp):
         self.hp=hp
         return self.hp
@@ -116,53 +115,40 @@ class Pikachu(Pokemon):
     
     def print_hp(self):
         print('hp:', self.hp)
-        
+
+class Pikachu(Pokemon):
+    def __str__(self):
+        s= '[pickachu] hp: {} attack: {} damage: {}'.format(self.hp,self.attack,self.damage)
+        return s        
+
 pikachu1 = Pikachu(500,'quick attack',100)
 pikachu1.print_hp()
+print(pikachu1)
 
 pikachu2 = Pikachu(389,'mega bolt', 5000)
 pikachu2.print_hp()
+print(pikachu2)
 
 class Butterful(Pokemon):
-    def set_hp(self,hp):
-        self.hp=hp
-        return self.hp
-    
-    def set_attack(self,attack):
-        self.attack=attack
-        return self.attack
-    
-    def set_damage (self,damage):
-        self.damage = damage
-        return self.damage
-    
-    def print_hp(self):
-        print('hp:', self.hp)
+    def __str__(self):
+        d='[butterful] hp: {} attack: {} damage: {}'.format(self.hp,self.attack,self.damage)
+        return d
         
-pikachu1 = Butterful(500,'venom',100)
-pikachu1.print_hp()
+butterful1 = Butterful(500,'venom',100)
+butterful1.print_hp()
+print(butterful1)
 
-pikachu2 = Butterful(310,'solar beam', 400)
-pikachu2.print_hp()
+butterful2 = Butterful(310,'solar beam', 4000)
+butterful2.print_hp()
+print(butterful2)
 
 class Eevee(Pokemon):
-    def set_hp(self,hp):
-        self.hp=hp
-        return self.hp
-    
-    def set_attack(self,attack):
-        self.attack=attack
-        return self.attack
-    
-    def set_damage (self,damage):
-        self.damage = damage
-        return self.damage
-    
-    def print_hp(self):
-        print('hp:', self.hp)
-        
-pikachu1 = Eevee(500,'quick attack',100)
-pikachu1.print_hp()
-
-pikachu2 = Eevee(389,'lastresort', 500)
-pikachu2.print_hp()
+    def __str__(self):
+        e = '[eevee] hp: {} attack: {} damage: {}'.format(self.hp,self.attack,self.damage)
+        return e
+Eevee1 = Eevee(500,'quick attack',100)
+Eevee1.print_hp()
+print(Eevee1)
+Eevee2 = Eevee(389,'lastresort', 500)
+Eevee2.print_hp()
+print(Eevee2)
