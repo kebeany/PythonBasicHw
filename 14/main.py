@@ -41,13 +41,9 @@ f = open("new.txt",'w')
 f.write("put in new.txt")
 f.close()
 
-f = open("ICECREAM.txt", 'w')
-class Desert:
-
-    
 
 def print_command():
-    print('''1. icecream added
+    print('''    1. icecream added
     2. icecream price
     3. icecream erase
     4. icecream print
@@ -91,4 +87,10 @@ while True:
     elif command == '5':
         break
 
-f.close("ICECREAM.txt")
+f = open("ICECREAM.txt", 'w')
+
+for key in product.keys():
+    s = '{}:{}\n'.format(key, product[key])
+    f.write(s)
+
+f.close()
