@@ -116,19 +116,20 @@ def scope():
     global var1
     var1 = 'usefulness of global codes'
     var2 = 'local variable'
-    print('inside then function var1: ', var1)
-    print('inside the function var2: ', var2)
+    print('inside the function var1: ', var1)#2,inside the function var1: usefulness of global codes
+    print('inside the function var2: ', var2)#2, inside the function var2: local variable
     
 var1 = 'global variable1'
 var2 = 'global variable2'
  
-print('before function var1: ', var1)
-print('before function var2: ', var2)
+print('before function var1: ', var1)#1, before function  var1: global variable1
+print('before function var2: ', var2)#1, before function var1: global variable2
      
 scope()
 
-print('after function var1: ', var1)
-print('after function var2: ', var2)
+print('after function var1: ', var1)#3, after function var1: global variable1
+print('after function var2: ', var2)#3, after function var2: global variable2
+
 
 var = 'global variable'
 
